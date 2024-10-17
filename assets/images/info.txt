@@ -1,1 +1,2 @@
-//todo
+back_dimmer: body background
+back_brighter: header background
