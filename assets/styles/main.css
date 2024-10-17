@@ -61,3 +61,7 @@ body
 	white-space:pre;
 	font-size:150%;
 }
+.gamewindow
+{
+	aspect-ratio:16/9;
+}
