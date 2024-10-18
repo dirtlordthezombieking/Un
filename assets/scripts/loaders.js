@@ -12,9 +12,12 @@ const loaders=
 		ret.sound.style.display="none";
 		document.body.appendChild(ret.sound);
 		ret.track=globals.audioContext.createMediaElementSource(ret.sound);
-		ret.stereoNode=new StereoPannerNode(globalsaudioContext,{pan:0});
-		ret.track.connect(ret.stereoNode).connect(globals.audioContext.destination);
-		ret.setPan(0
+		ret.panNode=new StereoPannerNode(globalsaudioContext,{pan:0});
+		ret.track.connect(ret.panNode).connect(globals.audioContext.destination);
+		ret.setPan=function(value)
+		{
+			this.panNode.pan.value=value;
+		}
 		return ret;
 	}
 }
