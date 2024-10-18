@@ -118,7 +118,7 @@ const parsers=
 			{
 				ret.get=function()
 				{
-					return false
+					return false;
 				};
 				break;
 			}
