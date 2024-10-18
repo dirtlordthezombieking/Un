@@ -14,7 +14,7 @@ const loaders=
 		ret.track=globals.audioContext.createMediaElementSource(ret.sound);
 		ret.stereoNode=new StereoPannerNode(globalsaudioContext,{pan:0});
 		ret.track.connect(ret.stereoNode).connect(globals.audioContext.destination);
-		
+		ret.setPan(0
 		return ret;
 	}
 }
