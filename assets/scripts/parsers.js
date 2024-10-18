@@ -88,7 +88,7 @@ const parsers=
 							return false;
 						}
 					}
-					return true
+					return true;
 				};
 				break;
 			}
@@ -110,7 +110,7 @@ const parsers=
 							return true;
 						}
 					}
-					return false
+					return false;
 				};
 				break;
 			}
@@ -119,10 +119,10 @@ const parsers=
 				ret.get=function()
 				{
 					return false
-				}
+				};
 				break;
 			}
 		}
 		return ret;
 	}
-}
+};
