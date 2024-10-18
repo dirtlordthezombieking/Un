@@ -18,6 +18,6 @@ const formulas=
 	}
 	time(input)
 	{
-		return ((input%36)*3)/125;
+		return ((input%3600000)*3)/125;
 	}
 };
