@@ -1,6 +1,6 @@
 const constants=
 {
-	stepBalance:[0.75,0.25];
+	stepBalance:[0.75,0.25],
 	sounds:
 	{
 		step:
@@ -15,4 +15,4 @@ const constants=
 			}
 		}
 	}
-}
+};
