@@ -12,7 +12,7 @@ const loaders=
 		ret.sound.style.display="none";
 		document.body.appendChild(ret.sound);
 		ret.track=globals.audioContext.createMediaElementSource(ret.sound);
-		ret.panNode=new PannerNode(globalsaudioContext,{coneInnerAngle:360,coneOuterAngle:360,maxDistance:});
+		ret.panNode=new PannerNode(globalsaudioContext,{coneInnerAngle:360,coneOuterAngle:360,maxDistance:32,positionX:0,positionY:0,positionZ:0,rolloffFactor:0});
 		ret.track.connect(ret.panNode).connect(globals.audioContext.destination);
 		ret.setPan=function(value)
 		{
