@@ -1,5 +1,6 @@
 const constants=
 {
+	stepwiegh
 	sounds:
 	{
 		step:
@@ -7,7 +8,10 @@ const constants=
 			metal:
 			{
 				sound:loaders.loadSound("metal_08");
-				playnext
+				playnext()
+				{
+					this.
+				}
 			}
 		}
 	}
