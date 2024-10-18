@@ -76,7 +76,7 @@ const parsers=
 				const l=src.conditions.length;
 				for(let i=0;i<l;i++)
 				{
-					ret.conds.push(parseConditon(src.conditions[i]));
+					ret.conds.push(this.parseConditon(src.conditions[i]));
 				}
 				ret.get=function()
 				{
@@ -98,7 +98,7 @@ const parsers=
 				const l=src.conditions.length;
 				for(let i=0;i<l;i++)
 				{
-					ret.conds.push(parseConditon(src.conditions[i]));
+					ret.conds.push(this.parseConditon(src.conditions[i]));
 				}
 				ret.get=function()
 				{
