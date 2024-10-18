@@ -18,8 +18,8 @@
 navigator.storage.persist();
 const data=
 {
-	const:save={},
-	const:session={},
+	save:{},
+	session:{},
 	loadGame()
 	{
 		data.session.clear();
