@@ -19,5 +19,9 @@ const formulas=
 	time(input)
 	{
 		return Math.floor(((input%3600000)*3)/125);
+	},
+	soundDistance(distance)
+	{
+		return 1/r;
 	}
 };
