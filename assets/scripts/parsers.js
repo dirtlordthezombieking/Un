@@ -12,7 +12,7 @@ const parsers=
 				ret.get=function()
 				{
 					return this.loc.get();
-				}
+				};
 				break;
 			}
 			case "notbool":
@@ -21,7 +21,7 @@ const parsers=
 				ret.get=function()
 				{
 					return !this.loc.get();
-				}
+				};
 				break;
 			}
 			case "and":
@@ -43,7 +43,7 @@ const parsers=
 						}
 					}
 					return true
-				}
+				};
 				break;
 			}
 			case "or":
@@ -65,7 +65,7 @@ const parsers=
 						}
 					}
 					return false
-				}
+				};
 				break;
 			}
 			default:
