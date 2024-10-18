@@ -83,7 +83,7 @@ const parsers=
 	{
 		const type=src.location;
 		const ret={};
-		ret name=src.name;
+		ret.name=src.name;
 		switch(type)
 		{
 			case "save":
