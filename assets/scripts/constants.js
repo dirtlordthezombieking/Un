@@ -1,6 +1,6 @@
 const constants=
 {
-	stepwiegh
+	stepBalance:[0.75,0.25];
 	sounds:
 	{
 		step:
