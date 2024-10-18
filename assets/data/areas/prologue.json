@@ -47,7 +47,7 @@
 								"name":"prologuedoor"
 							}
 						]
-					}
+					},
 					"scene":"prologue/opendoor"
 				},
 				{
@@ -74,7 +74,7 @@
 			}
 		}
 	],
-	"walksound":"metal"
+	"walksound":"metal",
 	"onload":
 	[
 		{
