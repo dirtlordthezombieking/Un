@@ -15,7 +15,7 @@ const formulas=
 	timeNow()
 	{
 		return this.time(Date.now());
-	}
+	},
 	time(input)
 	{
 		return Math.floor(((input%3600000)*3)/125);
