@@ -1,5 +1,51 @@
 const parsers=
 {
+	parseDataLocation(src)
+	{
+		const type=src.location;
+		const ret={};
+		ret.name=src.name;
+		switch(type)
+		{
+			case "save":
+			{
+				ret.get=function()
+				{
+					return data.save[this.name];
+				};
+				ret.seret=function(value)
+				{
+					data.save[this.name]=value;
+				};
+				break;
+			}
+			case "session":
+			{
+				ret.get=function()
+				{
+					return data.session[this.name];
+				};
+				ret.seret=function(value)
+				{
+					data.session[this.name]=value;
+				};
+				break;
+			}
+			default:
+			{
+				ret.get=function()
+				{
+					return undefined;
+				};
+				ret.seret=function(value)
+				{
+					return;
+				};
+				break;
+			}
+		}
+		return ret;
+	},
 	parseConditon(src)
 	{
 		const type=src.type;
@@ -74,52 +120,6 @@ const parsers=
 				{
 					return false
 				}
-				break;
-			}
-		}
-		return ret;
-	},
-	parseDataLocation(src)
-	{
-		const type=src.location;
-		const ret={};
-		ret.name=src.name;
-		switch(type)
-		{
-			case "save":
-			{
-				ret.get=function()
-				{
-					return data.save[this.name];
-				};
-				ret.seret=function(value)
-				{
-					data.save[this.name]=value;
-				};
-				break;
-			}
-			case "session":
-			{
-				ret.get=function()
-				{
-					return data.session[this.name];
-				};
-				ret.seret=function(value)
-				{
-					data.session[this.name]=value;
-				};
-				break;
-			}
-			default:
-			{
-				ret.get=function()
-				{
-					return undefined;
-				};
-				ret.seret=function(value)
-				{
-					return;
-				};
 				break;
 			}
 		}
