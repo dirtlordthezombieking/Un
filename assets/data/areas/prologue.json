@@ -63,7 +63,22 @@
 					},
 					"scene":"prologue/door"
 				}
-			]
+			],
+			"triggers":
+			{
+				"area":
+				[
+					[ -2,-13, 7, 5]
+				],
+				"scene":"prologue/end"
+			}
+		}
+	],
+	"walksound":"metal"
+	"onload":
+	[
+		{
+			"scene":"prologue/start"
 		}
 	]
 }
