@@ -6,7 +6,8 @@ const constants=
 		{
 			metal:
 			{
-				sound:
+				sound:loaders.loadSound("metal_08");
+				playnext
 			}
 		}
 	}
