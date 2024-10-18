@@ -14,12 +14,54 @@
 				[ 14,-12, 1,12],
 				[  9,  0, 6,10],
 				[ 11, 10, 4, 4],
-				[  6, 14, 9, 1]
+				[  6, 14, 9, 1],
+				[  7,  9, 2, 1]
 			],
 			"interactions":
 			[
 				{
-					
+					"area":
+					[
+						[  6, 14, 2, 1]
+					],
+					"scene":"prologue/getkey"
+				},
+				{
+					"area":
+					[
+						[  7,  9, 2, 1]
+					],
+					"condition":
+					{
+						"type":"and",
+						"conditions":
+						[
+							{
+								"type":"bool",
+								"location":"save",
+								"name":"prologuekey"
+							},
+							{
+								"type":"notbool",
+								"location":"save",
+								"name":"prologuedoor"
+							}
+						]
+					}
+					"scene":"prologue/opendoor"
+				},
+				{
+					"area":
+					[
+						[  7,  9, 2, 1]
+					],
+					"condition":
+					{
+						"type":"bool",
+						"location":"save",
+						"name":"prologuekey"
+					},
+					"scene":"prologue/door"
 				}
 			]
 		}
