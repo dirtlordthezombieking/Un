@@ -26,7 +26,7 @@ const parsers=
 			}
 			case "and":
 			{
-				const ret.conds=[]
+				ret.conds=[]
 				const l=src.conditions.length;
 				for(let i=0;i<l;i++)
 				{
@@ -48,7 +48,7 @@ const parsers=
 			}
 			case "or":
 			{
-				const ret.conds=[]
+				ret.conds=[]
 				const l=src.conditions.length;
 				for(let i=0;i<l;i++)
 				{
