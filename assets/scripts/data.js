@@ -1,6 +1,4 @@
-const save={};
-const session={};
-//let data;
+//let savedata;
 //{
 	//let req=window.indexedDB.open("data",1);
 	//req.onerror=(event)=>
@@ -9,7 +7,7 @@ const session={};
 	//};
 	//request.onsuccess=(event)=>
 	//{
-		//data=event.target.result;
+		//savedata=event.target.result;
 	//};
 	//request.onupgradeneeded=(event)=>
 	//{
@@ -20,14 +18,24 @@ const session={};
 navigator.storage.persist();
 const data=
 {
-	load()
+	const:save={},
+	const:session={},
+	loadGame()
 	{
-		session.clear();
-		save.clear();
-		const temp=
+		data.session.clear();
+		data.save.clear();
+		const temp=JSON.parse(localStorage.getItem("save"));
+		if(!temp)
+		{
+			return;
+		}
 		for(const key of Object.keys(temp))
 		{
-			save[key]=temp[key];
+			data.save[key]=temp[key];
 		}
+	},
+	saveGame()
+	{
+		localStorage.setItem(JSON.stringify(data.save));
 	}
 };
