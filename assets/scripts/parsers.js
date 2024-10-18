@@ -17,15 +17,49 @@ const parsers=
 				ret.loc=parseDataLocation(src);
 				ret.get=function()
 				{
-					return !(this.loc.get());
+					return !this.loc.get();
 				}
 				break;
 			case "and":
 				const conds=[]
-				
+				const l=src.conditions.length;
+				for(let i=0;i<l;i++)
+				{
+					conds.push(parseConditon(src.conditions[i]));
+				}
+				ret.conds=conds;
 				ret.get=function()
 				{
-					return this.loc.get();
+					const l=this.conds.length;
+					for(let i=0;i<l;i++)
+					{
+						if(!this.conds[i])
+						{
+							return false;
+						}
+					}
+					return true
+				}
+				break;
+			case "or":
+				const conds=[]
+				const l=src.conditions.length;
+				for(let i=0;i<l;i++)
+				{
+					conds.push(parseConditon(src.conditions[i]));
+				}
+				ret.conds=conds;
+				ret.get=function()
+				{
+					const l=this.conds.length;
+					for(let i=0;i<l;i++)
+					{
+						if(this.conds[i])
+						{
+							return true;
+						}
+					}
+					return false
 				}
 				break;
 			default:
