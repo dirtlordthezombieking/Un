@@ -72,7 +72,7 @@ const parsers=
 			}
 			case "and":
 			{
-				ret.conds=[]
+				ret.conds=[];
 				const l=src.conditions.length;
 				for(let i=0;i<l;i++)
 				{
@@ -80,8 +80,8 @@ const parsers=
 				}
 				ret.get=function()
 				{
-					const l=this.conds.length;
-					for(let i=0;i<l;i++)
+					const l2=this.conds.length;
+					for(let i=0;i<l2;i++)
 					{
 						if(!this.conds[i])
 						{
@@ -94,7 +94,7 @@ const parsers=
 			}
 			case "or":
 			{
-				ret.conds=[]
+				ret.conds=[];
 				const l=src.conditions.length;
 				for(let i=0;i<l;i++)
 				{
@@ -102,8 +102,8 @@ const parsers=
 				}
 				ret.get=function()
 				{
-					const l=this.conds.length;
-					for(let i=0;i<l;i++)
+					const l2=this.conds.length;
+					for(let i=0;i<l2;i++)
 					{
 						if(this.conds[i])
 						{
