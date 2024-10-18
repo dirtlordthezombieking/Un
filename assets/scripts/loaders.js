@@ -11,6 +11,7 @@ const loaders=
 		ret.sound.loop=false;
 		ret.sound.style.display="none";
 		document.body.appendChild(ret.sound);
+		ret.track=globals.audioContext.createMediaElementSource(ret.sound);
 		return ret;
 	}
 }
