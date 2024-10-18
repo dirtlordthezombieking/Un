@@ -7,27 +7,31 @@ const parsers=
 		switch(type)
 		{
 			case "bool":
+			{
 				ret.loc=parseDataLocation(src);
 				ret.get=function()
 				{
 					return this.loc.get();
 				}
 				break;
+			}
 			case "notbool":
+			{
 				ret.loc=parseDataLocation(src);
 				ret.get=function()
 				{
 					return !this.loc.get();
 				}
 				break;
+			}
 			case "and":
-				const conds=[]
+			{
+				const ret.conds=[]
 				const l=src.conditions.length;
 				for(let i=0;i<l;i++)
 				{
-					conds.push(parseConditon(src.conditions[i]));
+					ret.conds.push(parseConditon(src.conditions[i]));
 				}
-				ret.conds=conds;
 				ret.get=function()
 				{
 					const l=this.conds.length;
@@ -41,14 +45,15 @@ const parsers=
 					return true
 				}
 				break;
+			}
 			case "or":
-				const conds=[]
+			{
+				const ret.conds=[]
 				const l=src.conditions.length;
 				for(let i=0;i<l;i++)
 				{
-					conds.push(parseConditon(src.conditions[i]));
+					ret.conds.push(parseConditon(src.conditions[i]));
 				}
-				ret.conds=conds;
 				ret.get=function()
 				{
 					const l=this.conds.length;
@@ -62,12 +67,15 @@ const parsers=
 					return false
 				}
 				break;
+			}
 			default:
+			{
 				ret.get=function()
 				{
 					return false
 				}
 				break;
+			}
 		}
 		return ret;
 	},
@@ -79,6 +87,7 @@ const parsers=
 		switch(type)
 		{
 			case "save":
+			{
 				ret.get=function()
 				{
 					return data.save[this.name];
@@ -88,7 +97,21 @@ const parsers=
 					data.save[this.name]=value;
 				};
 				break;
+			}
+			case "session":
+			{
+				ret.get=function()
+				{
+					return data.session[this.name];
+				};
+				ret.seret=function(value)
+				{
+					data.session[this.name]=value;
+				};
+				break;
+			}
 			default:
+			{
 				ret.get=function()
 				{
 					return undefined;
@@ -98,6 +121,7 @@ const parsers=
 					return;
 				};
 				break;
+			}
 		}
 		return ret;
 	}
