@@ -54,7 +54,7 @@ const parsers=
 		{
 			case "bool":
 			{
-				ret.loc=parseDataLocation(src);
+				ret.loc=this.parseDataLocation(src);
 				ret.get=function()
 				{
 					return this.loc.get();
@@ -63,7 +63,7 @@ const parsers=
 			}
 			case "notbool":
 			{
-				ret.loc=parseDataLocation(src);
+				ret.loc=this.parseDataLocation(src);
 				ret.get=function()
 				{
 					return !this.loc.get();
