@@ -6,10 +6,18 @@ const formulas=
 	},
 	multiRandomRoll(chance,count)
 	{
-		return choiceMultiRandomRoll(chance,count,Math.random());
+		return this.choiceMultiRandomRoll(chance,count,Math.random());
 	},
 	choiceMultiRandomRoll(chance,count,randomNumber)
 	{
 		return ((randomNumber**(1-chance))**(2/chance))*count;
+	},
+	timeNow()
+	{
+		return this.time(Date.now());
+	}
+	time(input)
+	{
+		return ((input%36)*3)/125;
 	}
 };
