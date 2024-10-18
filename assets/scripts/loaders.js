@@ -3,7 +3,7 @@ const loaders=
 	loadSound(src)
 	{
 		const ret=document.createElement("audio");
-		ret.src=""+src+".ogg";
+		ret.src="assets/audio/sounds/"+src+".ogg";
 		ret.type="audio/ogg";
 		ret.setAttribute("preload", "auto");
 		ret.setAttribute("controls", "none");
