@@ -1,1 +1,5 @@
-//todo
+metal_08:
+-from:100 CC0 SFX
+--https://opengameart.org/content/100-cc0-sfx
+-by:rubberduck
+--https://opengameart.org/users/rubberduck
